@@ -19,19 +19,43 @@
 			top:400px;
 			left:400px;
 		}
+		#installpopup{
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			background-color: rgb(104, 104, 104) ;
+			padding:20px 20px 20px 20px;
+			color:white;
+			font-family: Arial, sans-serif;
+			outline-color:black;
+			outline-style:solid;
+			outline-width:1px;
+			display:none;
+		}
 	</style>
 	
 </head>
 
 <body>
 
-	<div id='gifs'>
-		
+	<div id='installpopup'>
+		You've installed GIMP help successfully!
+		<br><br>
+
+		<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+		<label for="vehicle1">Show tips in a popup when I hover over things</label><br>
+		<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+		<label for="vehicle2">Show tips in a fixed window</label><br>
+
 	</div>
+
+	<div id='gifs'></div>
 	
 	<div id='temptext'></div>
 
-	<script src='/assets/help.js'></script>
+	<script src='/assets/help.js' type='text/javascript'></script>
 </body>
 
 
