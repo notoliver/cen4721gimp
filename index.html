@@ -14,10 +14,9 @@
 			height:225px;
 			width:auto;
 		}
-		#temptext{
-			position:absolute;
-			top:400px;
-			left:400px;
+		.fgif img{
+			height:auto;
+			width:235px;
 		}
 		#installpopup{
 			text-align: center;
@@ -32,7 +31,14 @@
 			outline-color:black;
 			outline-style:solid;
 			outline-width:1px;
-			display:none;
+		}
+		#temphelp{
+			position:absolute;
+			left:420px;
+			top:26px;
+			width:30px;
+			height:20px;
+			cursor:pointer;
 		}
 	</style>
 	
@@ -41,20 +47,24 @@
 <body>
 
 	<div id='installpopup'>
-		You've installed GIMP help successfully!
+		<div style='position:absolute; top:0; right:4px;cursor:pointer' onclick="document.getElementById('installpopup').style.display='none';">&#10006</div>
+		
+		<p>You've installed GIMP help successfully!</p>
+		<input type="checkbox" id="popup" name="popup" value="popup" checked onclick="usePopup=!usePopup;">
+			<label for="popup">Show tips in a popup when I hover over things</label>
 		<br><br>
-
-		<input type="checkbox" id="popup" name="popup" value="popup">
-			<label for="popup">Show tips in a popup when I hover over things</label><br>
-		<input type="checkbox" id="fixed" name="fixed" value="fixed">
-			<label for="fixed">Show tips in a fixed window</label><br>
-
+		<input type="checkbox" id="fixed" name="fixed" value="fixed" onclick="useFixed=!useFixed;">
+			<label for="fixed">Show tips in a fixed window</label>
+		<br><br>
+		<p>You can change this setting at any time in the Help menu
+		<p>Click <x style='color:rgb(168, 235, 255);cursor:pointer;'onclick="document.getElementById('installpopup').style.display='none';">here</x> to close this window</p>
 	</div>
 
-	<div id='gifs'></div>
-	
-	<div id='temptext'></div>
+	<div id='popupgifs'></div>
+	<div id='fixedgifs'></div>
 
+	<div id='temphelp' onclick="document.getElementById('installpopup').style.display='block'"></div>
+	
 	<script src='assets/help.js' type='text/javascript'></script>
 </body>
 
