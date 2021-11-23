@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CEN4721 Interactive Prototype</title>
+	<style>
+		body {
+			background-image: url('assets/gimpbg.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		#temphelp{
+			position:absolute;
+			left:420px;
+			top:26px;
+			width:30px;
+			height:20px;
+			cursor:pointer;
+		}
+		.gif{
+			outline-style:solid;
+			outline-width: 1px;
+			background-color: white;
+			color:black;
+			padding:1px 1px;
+		}
+		.gif p{
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+			padding:1px 1px;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<div id='popupgifs'></div>
+
+	<div id='temphelp' onclick="window.open('https:\/\/docs.gimp.org\/2.10\/en\/');"></div>
+	
+	<script src='assets/help.js' type='text/javascript'></script>
+</body>
+
+
+
+</html>
